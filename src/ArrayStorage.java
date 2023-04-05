@@ -31,12 +31,10 @@ public class ArrayStorage {
     void delete(String uuid) {
         int posDelVal = posFoundVal(uuid);
         storage[posDelVal] = null;
-        for (int i = posDelVal; i < storage.length - 1; i++) {
+        for (int i = posDelVal; i < size(); i++) {
             storage[i] = storage[i + 1];
         }
         //починил
-
-
     }
 
     /**
